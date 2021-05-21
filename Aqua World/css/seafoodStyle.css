@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Simonetta:wght@900&display=swap");
+/* learned how to customize scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #8c99a6;
+}
+::-webkit-scrollbar-track {
+  background: #2c333a;
+  border-radius: 15%;
+}
+::-webkit-scrollbar-thumb {
+  background: #e6e6fa;
+  border-radius: 20%;
+}
+::-moz-scrollbar {
+  width: 10px;
+  background: #8c99a6;
+}
+::-moz-scrollbar-track {
+  background: #2c333a;
+  border-radius: 15%;
+}
+::-moz-scrollbar-thumb {
+  background: #e6e6fa;
+  border-radius: 20%;
+}
+::-ms-scrollbar {
+  width: 10px;
+  background: #8c99a6;
+}
+::-ms-scrollbar-track {
+  background: #2c333a;
+  border-radius: 15%;
+}
+::-ms-scrollbar-thumb {
+  background: #e6e6fa;
+  border-radius: 20%;
+}
+::-o-scrollbar {
+  width: 10px;
+  background: #8c99a6;
+}
+::-o-scrollbar-track {
+  background: #2c333a;
+  border-radius: 15%;
+}
+::-o-scrollbar-thumb {
+  background: #e6e6fa;
+  border-radius: 20%;
+}
+/* got to know about smooth scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  scroll-behavior: smooth;
+}
+header {
+  background: url("../images/Seafood/seafood around.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+body {
+  background-image: linear-gradient(to bottom, #262626, #0d0d0d);
+  overflow-x: hidden;
+}
+h1 {
+  color: transparent;
+  position: absolute;
+  font-family: "Yesteryear", cursive;
+  text-transform: uppercase;
+  height: 450px;
+  width: 550px;
+  left: 500px;
+  top: 190px;
+  font-size: 80px;
+  word-spacing: 80px;
+  text-align: center;
+  z-index: 5;
+  -webkit-text-stroke: #e0ffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #0eff87;
+  -moz-text-stroke: #e0ffff;
+  -moz-text-stroke-width: 1px;
+  -moz-text-fill-color: #0eff87;
+  -ms-text-stroke: #e0ffff;
+  -ms-text-stroke-width: 1px;
+  -ms-text-fill-color: #0eff87;
+  -o-text-stroke: #e0ffff;
+  -o-text-stroke-width: 1px;
+  -o-text-fill-color: #0eff87;
+}
+h1::first-line {
+  text-align: left;
+}
+header > p {
+  font-family: "La Belle Aurore", cursive;
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: bold;
+  position: relative;
+  color: #000080;
+  letter-spacing: 5px;
+  display: inline-block;
+  left: 20px;
+}
+/* practically applied how links appear on hover */
+nav {
+  position: relative;
+  top: -10px;
+  left: 900px;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
+  display: inline-block;
+}
+.inlineblock {
+  display: inline-block;
+}
+.home {
+  position: relative;
+  right: 30px;
+}
+.hover > ul li:hover {
+  background-color: rgba(217, 217, 217, 0.3);
+}
+.hover2 {
+  position: relative;
+  left: 40px;
+}
+.hover2 > ul li:hover {
+  background-color: rgba(217, 217, 217, 0.3);
+}
+.hover2 > ul li {
+  text-align: center;
+}
+.none {
+  position: absolute;
+  display: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+}
+.hover:hover .none,
+.hover2:hover .none {
+  display: block;
+  list-style-type: none;
+  word-spacing: normal;
+  line-height: 25px;
+}
+.inlineblock a {
+  color: #ffdead;
+  text-decoration: none;
+}
+.none a {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.effect {
+  position: relative;
+  width: 650px;
+  left: 400px;
+  top: 30px;
+  height: 603px;
+}
+.top-left {
+  position: absolute;
+  left: 325px;
+  border-radius: 50px;
+}
+.top-right {
+  position: absolute;
+  top: 301px;
+  left: 325px;
+  border-radius: 150px 0 150px 150px;
+}
+.bottom-left {
+  position: absolute;
+  top: 301px;
+  opacity: 0;
+}
+.bottom-right {
+  position: absolute;
+  top: 302px;
+}
+.effect:hover .top-left {
+  animation-name: left;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.effect:hover .top-right {
+  animation: up 1s linear 800ms 1 forwards;
+}
+.effect:hover .bottom-right {
+  animation: right 1s linear 800ms 1 forwards;
+}
+.effect:hover .bottom-left {
+  animation: left-up 3s linear 2s 1 forwards;
+}
+.effect:hover {
+  animation: shadow 2s linear 3s 1 forwards;
+}
+@keyframes left {
+  100% {
+    transform: translateX(-325px);
+    border-radius: 0;
+  }
+}
+@keyframes up {
+  100% {
+    transform: translateY(-301px);
+    border-radius: 0;
+  }
+}
+@keyframes right {
+  0% {
+    z-index: -2;
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    transform: translateX(325px);
+    width: 325px;
+  }
+}
+@keyframes left-up {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shadow {
+  100% {
+    box-shadow: -12px -9px 5px -1px rgba(144, 238, 144, 0.3); /* rgba(65, 105, 225, 0.6); */
+  }
+}
+.shrimp {
+  position: relative;
+  top: 100px;
+  height: 500px;
+}
+.shrimp h2 {
+  color: #ee82ee;
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  font-size: 40px;
+  font-family: "Simonetta", cursive;
+}
+.shrimp figure {
+  position: absolute;
+  top: 200px;
+  left: 350px;
+}
+.shrimp img {
+  border-radius: 20px 0;
+}
+.shrimp figure:hover {
+  transform: scale(1.1);
+}
+.shrimp figcaption {
+  color: #9932cc;
+  width: 260px;
+  height: auto;
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  background-color: #eeee82;
+  text-align: center;
+  font-style: italic;
+  word-spacing: 10px;
+  line-height: 25px;
+  z-index: -1;
+  border-radius: 20px;
+}
+.shrimp figure:hover figcaption {
+  animation: move 2s ease-in-out 200ms 1 forwards;
+}
+@keyframes move {
+  100% {
+    transform: translateX(350px);
+  }
+}
+.fish {
+  position: relative;
+  top: 200px;
+  height: 530px;
+  margin-top: -40px;
+}
+.fish h2 {
+  color: #ee82ee;
+  float: right;
+  position: absolute;
+  right: 100px;
+  top: 60px;
+  font-size: 40px;
+  font-family: "Simonetta", cursive;
+}
+.fish figure {
+  float: right;
+  position: absolute;
+  top: 200px;
+  right: 250px;
+}
+.fish img {
+  width: 280px;
+  height: 260px;
+  border-radius: 0 20px;
+}
+.fish figure:hover {
+  transform: scale(1.1);
+}
+.fish figcaption {
+  color: #9932cc;
+  width: 270px;
+  height: 260px;
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 1px;
+  background: #f5f5f5;
+  text-align: center;
+  font-style: italic;
+  word-spacing: 10px;
+  line-height: 23px;
+  z-index: -1;
+  border-radius: 20px;
+}
+.fish figure:hover figcaption {
+  animation: move-out 2s ease-in-out 200ms 1 forwards;
+}
+@keyframes move-out {
+  from {
+    right: 0;
+  }
+  to {
+    right: 350px;
+  }
+}
+.crab {
+  position: relative;
+  height: 500px;
+  margin-top: 260px;
+}
+.crab h2 {
+  color: #ee82ee;
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  font-size: 40px;
+  font-family: "Simonetta", cursive;
+}
+.crab figure {
+  position: absolute;
+  top: 200px;
+  left: 350px;
+}
+.crab img {
+  width: 280px;
+  border-radius: 20px 0;
+}
+.crab figure:hover {
+  transform: scale(1.1);
+}
+.crab figcaption {
+  color: #9932cc;
+  width: 270px;
+  height: 280px;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  background-color: #eeee82;
+  text-align: center;
+  font-style: italic;
+  word-spacing: 10px;
+  line-height: 25px;
+  z-index: -1;
+  border-radius: 20px;
+}
+.crab figure:hover figcaption {
+  animation: move 2s ease-in-out 200ms 1 forwards;
+}
+.lobster {
+  position: relative;
+  top: 200px;
+  height: 530px;
+  margin-top: -40px;
+}
+.lobster h2 {
+  color: #ee82ee;
+  float: right;
+  position: absolute;
+  right: 100px;
+  top: 60px;
+  font-size: 40px;
+  font-family: "Simonetta", cursive;
+}
+.lobster figure {
+  float: right;
+  position: absolute;
+  top: 200px;
+  right: 250px;
+}
+.lobster img {
+  width: 280px;
+  height: 260px;
+  border-radius: 0 20px;
+}
+.lobster figure:hover {
+  transform: scale(1.1);
+}
+.lobster figcaption {
+  color: #9932cc;
+  width: 270px;
+  height: 260px;
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 1px;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-style: italic;
+  word-spacing: 15px;
+  line-height: 25px;
+  z-index: -1;
+  border-radius: 20px;
+}
+.lobster figure:hover figcaption {
+  animation: move-out 2s ease-in-out 200ms 1 forwards;
+}
+.scallop {
+  position: relative;
+  height: 500px;
+  margin-top: 260px;
+}
+.scallop h2 {
+  color: #ee82ee;
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  font-size: 40px;
+  font-family: "Simonetta", cursive;
+}
+.scallop figure {
+  position: absolute;
+  top: 200px;
+  left: 350px;
+}
+.scallop img {
+  height: 260px;
+  width: 280px;
+  border-radius: 20px 0;
+}
+.scallop figure:hover {
+  transform: scale(1.1);
+}
+.scallop figcaption {
+  color: #9932cc;
+  width: 279px;
+  height: 259px;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  background-color: #eeee82;
+  text-align: center;
+  font-style: italic;
+  word-spacing: 10px;
+  line-height: 23px;
+  z-index: -1;
+  border-radius: 20px;
+}
+.scallop figure:hover figcaption {
+  animation: move 2s ease-in-out 200ms 1 forwards;
+}
+footer {
+  background: linear-gradient(to bottom right, #00bfff, #00fa9a, #7fffd4);
+  height: 320px;
+  position: relative;
+  margin-top: 50px;
+}
+footer a {
+  text-decoration: none;
+  color: #ff0000;
+}
+footer ul {
+  display: inline-block;
+  position: absolute;
+  list-style-type: none;
+}
+footer ul:first-child {
+  width: 150px;
+  top: 70px;
+  left: 200px;
+  line-height: 25px;
+}
+footer ul:nth-child(2) {
+  width: 150px;
+  top: 70px;
+  left: 550px;
+  line-height: 27px;
+}
+footer ul:nth-child(3) {
+  float: right;
+  top: 70px;
+  right: 300px;
+  line-height: 27px;
+}
+.footer-home {
+  display: inline-block;
+  position: absolute;
+  top: 70px;
+  right: 120px;
+}
+small {
+  position: absolute;
+  bottom: 0;
+  left: 40vw;
+  color: #9400d3;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+footer ul::first-line,
+.footer-home {
+  color: #000080;
+  font-weight: bolder;
+  font-size: 18px;
+}
+footer ul:first-child li {
+  color: #ff00ff;
+  font-weight: 600;
+}
